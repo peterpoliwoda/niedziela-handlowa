@@ -9,7 +9,8 @@ body {
 
 .cover-container {
   width: 100%;
-  height: 100%;
   background: linear-gradient(157deg, rgba(126,31,190,0.3) 0%, rgba(6,68,39,0.5) 50%, rgba(252,176,69,0.4) 100%);
-  align-items: stretch;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
 }
