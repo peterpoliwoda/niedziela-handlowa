@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.about {
+  background-color: rgb(242, 242, 240);
+  padding: 0px;
+}
+
+.about p {
+  color: green;
+}
+
+.projects {
+  background-color: rgb(242, 242, 240);
+  padding: 10px;
+}
