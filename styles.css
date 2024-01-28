@@ -1,15 +1,87 @@
 body {
-  height: 100%;
-  background-color: #333;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  margin: 0px;
+    height: 100%;
+    background: #fef2e2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0px;
+
+    font-family: 'Source Sans 3', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #205a65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+{
+    color: #205a65;
+    font-family: 'Alfa Slab One', serif;
+}
+
+a {
+    color: #205a65;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .cover-container {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(157deg, rgba(126,31,190,0.3) 0%, rgba(6,68,39,0.5) 50%, rgba(252,176,69,0.4) 100%);
-  align-items: stretch;
+    width: 100%;
+    height: 100%;
+    align-items: stretch;
+}
+
+.all-niedziele-handlowe {
+    font-family: 'Source Sans 3', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.giant-yes-no {
+    font-family: 'Alfa Slab One', serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 5rem;
+    color: #205a65;
+}
+
+.todays-date-card {
+    background: #48b2a1;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fef2e2;
+    border: #48b2a1;
+}
+
+.subtitle-yes {
+    color: #fef2e2;
+}
+
+.background-yes {
+    background: #fef2e2;
+}
+
+.giant-icon {
+    font-size: 14rem;
+    line-height: 0.3;
+}
+
+.yes-icon {
+    color: #48b2a1;
+}
+
+.no-icon {
+    color: #ff9da7;
+}
+
+.other-icon {
+    color: #9dd1bd;
 }
