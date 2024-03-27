@@ -61,6 +61,25 @@ a {
     border: #48b2a1;
 }
 
+.reminder-card {
+    background: #205a65;
+    border: #48b2a1;
+    border-radius: 0.375rem;
+}
+
+.reminder-card .btn {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fef2e2;
+    border: 0;
+}
+
+.reminder-card .btn:active {
+    border: 0;
+    color: #fef2e233;
+}
+
 .subtitle-yes {
     color: #fef2e2;
 }
