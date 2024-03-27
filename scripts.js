@@ -61,7 +61,7 @@ $(function () {
   const yesIcon = "<span class=\"yes-icon\"><i class=\"fa-solid fa-square-check\"></i>";
   const otherIcon = "<span class=\"other-icon\"><i class=\"fa-solid fa-calendar-days\"></i>";
 
-  let nextNiedzielaHandlowa = '';
+  let nextNiedzielaHandlowa = getNextNiedzielaHandlowa();
 
   // Notifications can only be sent NOW. Which makes this a poor implementation for a reminder.
   // Chrome has been experimenting with a showTrigger option which was capable of scheduling
@@ -94,6 +94,17 @@ $(function () {
   //   });
   // });
 
+  // loops through all the dates in handloweNiedzieleDaty and returns the next niedziela handlowa
+  function getNextNiedzielaHandlowa() {
+    const currentDate = moment();
+    const nextNiedzielaHandlowa = handloweNiedzieleDaty.find((dataNiedzieliHandlowej) => {
+      const dataNiedzieliHandlowejAsDate = moment(dataNiedzieliHandlowej);
+      return dataNiedzieliHandlowejAsDate.isAfter(currentDate);
+    });
+
+    return nextNiedzielaHandlowa;
+  }
+
   // use momentjs to fill in the inner html with handloweNiedzieleDaty
   function isTodayNiedzielaHandlowa() {
     const todayAsDate = moment().format('yyyy-MM-DD');
@@ -122,6 +133,8 @@ $(function () {
     const isTodaySunday = new Date().getDay() === 0;
 
     $('#todays-date-card').html(moment().locale('pl-pl').format('DD MMMM yyyy'));
+    $('#next-niedziela-date').html(moment(nextNiedzielaHandlowa).locale('pl-pl').format('DD MMMM yyyy'));
+    $('#next-niedziela-from-now').html(moment(nextNiedzielaHandlowa).locale('pl-pl').fromNow());
 
     // Fill this year's Shopping Sundays in a div table
     const formattedDates = handloweNiedzieleDaty.filter(dataNiedzieliHandlowej => dataNiedzieliHandlowej.indexOf(moment().format('yyyy')) > -1).map(function (date) {
@@ -167,7 +180,7 @@ $(function () {
         // Today's Day Card colour
         $('.todays-date-card').css('background', '#ff9da7');
       } else {
-        $('#niedziela-subtitle').html(`Dzisiaj jest ${moment().locale("pl-pl").format("dddd")}.`);
+        $('#niedziela-subtitle').html(`Dzisiaj jest: <br/> <strong>${moment().locale("pl-pl").format("dddd, DD MMMM YYYY")}.</strong>`);
         // Set niedziela-icon
         $('.giant-icon').html(otherIcon);
       }
