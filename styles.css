@@ -22,15 +22,6 @@ h5
     color: #205a65;
     font-family: 'Alfa Slab One', serif;
 }
-/*
-.card h1,
-.card h2,
-.card h3,
-.card h4,
-.card h5
-{
-    color: #fef2e2;
-} */
 
 a {
     color: #205a65;
@@ -91,6 +82,14 @@ a {
 
 .subtitle-yes {
     color: #fef2e2;
+}
+
+#niedziela-subtitle {
+    color:#205a65;
+}
+
+#niedziela-subtitle strong {
+    font-family: 'Alfa Slab One', serif;
 }
 
 .background-yes {
