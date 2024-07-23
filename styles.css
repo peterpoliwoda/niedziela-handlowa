@@ -113,3 +113,7 @@ a {
 .other-icon {
     color: #9dd1bd;
 }
+
+.what-is-niedziela-handlowa p, .what-is-niedziela-handlowa ul, .what-is-niedziela-handlowa h3 {
+    text-align: left;
+}

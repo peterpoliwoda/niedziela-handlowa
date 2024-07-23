@@ -140,7 +140,12 @@ $(function () {
     const formattedDates = handloweNiedzieleDaty.filter(dataNiedzieliHandlowej => dataNiedzieliHandlowej.indexOf(moment().format('yyyy')) > -1).map(function (date) {
       const stringFormattedDate = moment(date).locale('pl-pl').format('DD MMMM');
       const formattedDateAsOthers = moment(date).format('YYYY-MM-DD');
-      if (formattedDateAsOthers === formattedNextSunday) {
+
+      console.log('formattedDateAsOthers', formattedDateAsOthers);
+      const nextShoppingSunday = moment(getNextNiedzielaHandlowa()).format('YYYY-MM-DD');
+      console.log('nextShoppingSunday', nextShoppingSunday);
+
+      if (formattedDateAsOthers === nextShoppingSunday) {
         return `<strong>${stringFormattedDate}</strong>`;
       } else {
         return stringFormattedDate;
